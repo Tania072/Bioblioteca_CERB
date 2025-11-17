@@ -1,0 +1,11 @@
+sudo systemctl status mysql
+apt-get install lamp-server^
+
+mysql -u root
+CREATE USER 'toor'@'localhost' IDENTIFIED BY 'toor';
+GRANT ALL PRIVILEGES ON . TO 'toor'@'localhost';
+GRANT GRANT OPTION ON . TO 'toor'@'localhost
+FLUSH PRIVILEGES;
+\q
+
+apt-get install phpmyadmin

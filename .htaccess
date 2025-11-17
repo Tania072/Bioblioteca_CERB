@@ -1,0 +1,7 @@
+# Evita que Apache liste el contenido de carpetas sin index
+Options -Indexes
+# .htaccess en la raíz
+RewriteEngine On
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ index.php [QSA,L]
