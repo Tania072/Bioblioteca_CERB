@@ -16,6 +16,8 @@
     
     include "./views/modals/editar_perfil.php";
 
-
+    include './views/modals/solicitar_prestamo.php';
+    include './views/modals/nuevo_prestamo.php';
+    include './views/modals/editar_prestamo.php';
 
 ?>

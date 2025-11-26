@@ -68,6 +68,11 @@
             $("#contenido-principal").load("./views/libros/principal.php");
             return false; // Evita el comportamiento por defecto del enlace
         });
+        //Acceso a panel de libros de docentes
+        $(".panel-libros-docentes").click(function(){
+            $("#contenido-principal").load("./views/libros/principal_docentes.php");
+            return false; 
+        });
 
         //Acceso a panel de generos
         $(".panel-generos").click(function(){

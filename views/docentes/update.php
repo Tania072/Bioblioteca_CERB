@@ -9,13 +9,14 @@ $iddocente = $_POST['iddocente'];
 $nombres = $_POST['nombre'];
 $apellidos = $_POST['apellido'];
 $dui = $_POST['dui'];
-$dataUsuario = CRUD("SELECT * FROM usuarios WHERE idusuario='$idusuario'", "s");
+
+$dataUsuario = CRUD("SELECT usuario FROM usuarios WHERE idusuario='$idusuario'", "s");
 
 foreach ($dataUsuario as $du) {
     $usuario = $du['usuario'];
 }
 
-if (str_replace(' ', '', $dui) != $usuario) {
+if (str_replace('-', '', $dui) != $usuario) {
     $valUser = 1;
     $nUser = str_replace('-', '', $dui);
     $passw = password_hash($nUser, PASSWORD_DEFAULT);
@@ -29,11 +30,12 @@ if (isset($valUser) == 1) {
 
     CRUD("UPDATE usuarios SET usuario = '$nUser', passw = '$passw', email='$email', estado='$estado' WHERE idusuario = '$idusuario'", "u");
 } else {
-    $update = CRUD("UPDATE docentes SET nombres = '$nombres', apellidos = '$apellidos', dui = '$dui', email='$email', estado='$estado' WHERE iddocente = '$iddocente'", "u");
-
     $update = CRUD("UPDATE usuarios SET email='$email', estado='$estado' WHERE idusuario = '$idusuario'", "u");
+
+    $update = CRUD("UPDATE docentes SET nombres = '$nombres', apellidos = '$apellidos', dui = '$dui', email='$email', estado='$estado' WHERE iddocente = '$iddocente'", "u");
 }
 ?>
+
 <?php if ($update): ?>
     <script>
         $(document).ready(function () {

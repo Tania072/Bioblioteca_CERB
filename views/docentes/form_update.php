@@ -13,7 +13,7 @@ $dataDocente =  CRUD("SELECT * FROM docentes WHERE iddocente='$iddocente'", "s")
 $nombres = $dataDocente[0]['nombres'] ?? null;
 $apellidos = $dataDocente[0]['apellidos'] ?? null;
 $email = $dataDocente[0]['email'] ?? null;
-$idusuario = $dataDocente[0]['idrol'] ?? null;
+$idusuario = $dataDocente[0]['idusuario'] ?? null;
 $dui = $dataDocente[0]['dui'] ?? null;
 $estado = $dataDocente[0]['estado'] ?? null;
 

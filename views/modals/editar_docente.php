@@ -94,7 +94,7 @@
                 contentType: false,
                 processData: false,
                 success: function(result) {
-                    $("#ModalEU").modal('hide');
+                    $("#ModalED").modal('hide');
                     $("#PanelDocentes").html(result);
                 },
                 error: function() {

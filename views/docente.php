@@ -6,6 +6,9 @@
         <a href="" class="btn cambio-clave">
             <i class="fa-solid fa-gears fa-2x"></i> <br> <b>Configuración</b>
         </a>
+        <a href="" class="btn panel-libros-docentes">
+            <i class="fa-solid fa-book-open fa-2x"></i> <br> <b>Libros</b>
+        </a>
         <a href="" class="btn panel-prestamos">
             <i class="fa-solid fa-folder-plus fa-2x"></i> <br> <b>Prestamo</b>
         </a>
